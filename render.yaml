@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: evolution-api
+    runtime: docker
+    plan: free
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: AUTHENTICATION_API_KEY
+        value: barbosa_cruz_whatsapp_2024
+      - key: DATABASE_ENABLED
+        value: false
+      - key: REDIS_ENABLED
+        value: false
+      - key: SERVER_TYPE
+        value: http
+      - key: SERVER_PORT
+        value: 10000
